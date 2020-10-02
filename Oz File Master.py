@@ -1,15 +1,20 @@
 import os
-import sys
+from sys import exit
 
 print('{:-^167}'.format('Welcome To Oz Files Master'))
-print('\nAuthor: Tedd Bug\tUnicorn Code ©2020 All Rights Reserved.\n')
 print("\nSelect a file type to search\n[1]--MP4 files"
       "\t[2]--MP3 files\n[3]--PDF files\t[4]--Text files".expandtabs(8))
 print("[5]--MKV files\t[6]--Exe files\n[7]--Apk files\t[8]--Zip files\n[9]--ISO files\t[0]--Exit".expandtabs(8))
 
 
+root_storage = input('Specify root path: ')
+if root_storage:
+      pass
+else:
+      print('root path not specfied, I will use the default which is {!r}'.format('C:'))
+      root_storage = "C:"
 file_type = input('\noz_files>_ ')
-root_storage = "D:\\"
+
 
 if file_type == '1':
     mp4_check = []
@@ -231,4 +236,4 @@ elif file_type == '9':
         print('There are no iso files here.')
 
 elif file_type == '0':
-    sys.exit('!!{:-^36}!!'.format('GoodBye'))
+    exit('!!{:-^36}!!'.format('GoodBye'))
